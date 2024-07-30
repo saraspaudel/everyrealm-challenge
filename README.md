@@ -18,3 +18,6 @@
 
 ## Building
 `pnpm run build`
+
+## Testing
+`pnpm run test`
