@@ -18,7 +18,7 @@ Requirements:
 - The backend should be in either Typescript or JavaScript, using the NodeJS runtime
 - Time requirement: EOD Thursday (submit what you have at that time)
 
-- Bonus:
+Bonus:
 - burritos have options (say black olives, rice or sour cream)
 - authentication (say api key for simplicity)
 - use of Solana or Ethereum (no specification on how that might be used)
