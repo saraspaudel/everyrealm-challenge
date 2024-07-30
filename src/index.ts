@@ -5,13 +5,14 @@ import dotenv from 'dotenv';
 
 import burritoRoutes from './routes/burritoRoutes';
 import orderRoutes from './routes/orderRoutes';
+import { apiKeyAuth } from './middleware/auth';
 
 dotenv.config();
 
 const app = express();
 
 app.use(bodyParser.json());
-
+app.use(apiKeyAuth);
 app.use('/api', burritoRoutes);
 app.use('/api', orderRoutes);
 
