@@ -19,5 +19,5 @@
 ## Building
 `pnpm run build`
 
-## Test
+## Testing
 `pnpm run test`

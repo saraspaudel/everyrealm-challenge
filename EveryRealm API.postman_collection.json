@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "6c1daad9-746b-4a4a-8198-bbb2294df626",
+		"name": "EveryRealm API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34825211"
+	},
+	"item": [
+		{
+			"name": "Create a burrito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Chicken Burrito\",\n        \"size\": \"regular\",\n        \"price\": 3,\n        \"options\": [\"black olives\", \"rice\", \"sour cream\"]\n      }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/burritos",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"burritos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Burritos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/burritos",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"burritos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\n       { \"burritoId\": \"66a923458ccc9f33a7e36ab3\", \"quantity\": 5 }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get order by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "your-api-key"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/orders/66a92bef6bb2a437574925f7",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"66a92bef6bb2a437574925f7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
