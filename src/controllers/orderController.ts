@@ -49,5 +49,9 @@ export const createOrder = async (req: Request, res: Response) => {
     const order = new Order({ items: orderItems, totalCost });
     await order.save();
 
+    // Issue loyalty points based on the total cost
+    const pointsToIssue = totalCost; // 1 point per dollar spent
+    await issueLoyaltyPoints(userAddress, pointsToIssue);
+
     res.status(201).json(order);
 };
